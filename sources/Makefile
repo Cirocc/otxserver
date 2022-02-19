@@ -24,8 +24,8 @@ CXXFLAGS =	-pipe								-march=native				-mtune=native \
 
 
 #-- You may need to change the path of 'libtcmalloc_minimal' to the correct one for your distribution --#
-#-- For Ubuntu 20 on WSL2 the path is /usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4 --#
-LDFLAGS =		/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4 \
+#-- For Ubuntu 20 on WSL2 the path is /usr/lib/libtcmalloc_minimal.so.4 --#
+LDFLAGS =		/usr/lib/libtcmalloc_minimal.so.4 \
 					-llua5.1				-lxml2						-lboost_thread \
 					-lboost_system 	-lboost_filesystem		-lgmp \
 					-lmysqlclient		-lboost_regex				-lcrypto \
