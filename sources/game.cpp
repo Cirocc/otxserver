@@ -349,7 +349,7 @@ void Game::cleanMapEx(uint32_t& count)
 					continue;
 
 				tile->resetFlag(TILESTATE_TRASHED);
-				if(tile->hasFlag(TILESTATE_HOUSE) || !tile->getItemList())
+				if(tile->hasFlag(TILESTATE_HOUSE) || !tile->getItemList() || tile->hasFlag(TILESTATE_DEPOT))
 					continue;
 
 				++tiles;
@@ -378,7 +378,7 @@ void Game::cleanMapEx(uint32_t& count)
 					continue;
 
 				tile->resetFlag(TILESTATE_TRASHED);
-				if(tile->hasFlag(TILESTATE_PROTECTIONZONE) || !tile->getItemList())
+				if(tile->hasFlag(TILESTATE_PROTECTIONZONE) || !tile->getItemList() || tile->hasFlag(TILESTATE_DEPOT))
 					continue;
 
 				++tiles;
@@ -410,7 +410,7 @@ void Game::cleanMapEx(uint32_t& count)
 			{
 				for(uint16_t x = 1; x <= map->mapWidth; x++)
 				{
-					if(!(tile = getTile(x, y, z)) || tile->hasFlag(TILESTATE_HOUSE) || !tile->getItemList())
+					if(!(tile = getTile(x, y, z)) || tile->hasFlag(TILESTATE_HOUSE) || !tile->getItemList() || tile->hasFlag(TILESTATE_DEPOT))
 						continue;
 
 					++tiles;
@@ -441,7 +441,7 @@ void Game::cleanMapEx(uint32_t& count)
 			{
 				for(uint16_t x = 1; x <= map->mapWidth; x++)
 				{
-					if(!(tile = getTile(x, y, z)) || tile->hasFlag(TILESTATE_PROTECTIONZONE) || !tile->getItemList())
+					if(!(tile = getTile(x, y, z)) || tile->hasFlag(TILESTATE_PROTECTIONZONE) || !tile->getItemList() || tile->hasFlag(TILESTATE_DEPOT))
 						continue;
 
 					++tiles;
