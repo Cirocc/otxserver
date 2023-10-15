@@ -4460,7 +4460,7 @@ bool Game::playerYell(Player* player, const std::string& text, const uint32_t& s
 	return true;
 }
 
-std::vector<std::string> GetSpoofList() {
+std::vector<std::string> GetSpoofListGame() {
 
 	std::vector<std::string> spoofList;
 
@@ -4753,7 +4753,7 @@ bool Game::playerSpeakTo(Player* player, MessageClasses type, const std::string&
 {
 
 	/* Inicio Spoof System */
-    std::vector<std::string> spoofList = GetSpoofList();
+    std::vector<std::string> spoofList = GetSpoofListGame();
 
     std::string receiverLower = receiver;
     std::transform(receiverLower.begin(), receiverLower.end(), receiverLower.begin(), ::tolower);

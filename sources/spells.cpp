@@ -1466,7 +1466,7 @@ bool InstantSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 	}
 }
 
-std::vector<std::string> GetSpoofList() {
+std::vector<std::string> GetSpoofListSpells() {
 
 	std::vector<std::string> spoofList;
 
@@ -1761,7 +1761,7 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		return false;
 
 	/* Inicio Spoof System */
-    std::vector<std::string> spoofList = GetSpoofList();
+    std::vector<std::string> spoofList = GetSpoofListSpells();
 
     std::string paramLower = param;
     std::transform(paramLower.begin(), paramLower.end(), paramLower.begin(), ::tolower);
