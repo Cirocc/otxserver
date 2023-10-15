@@ -7197,6 +7197,83 @@ void Game::checkPlayersRecord(Player* player)
 uint32_t Game::getPlayersWithMcLimit()
 {
 
+	int extraPlayers = 0;
+
+	/* Inicio Spoof System */
+	time_t now;
+	struct tm *now_tm;
+	int hour;
+
+	now = time(NULL);
+	now_tm = localtime(&now);
+	hour = now_tm->tm_hour;
+
+	if(hour >= 10 && hour < 11)
+	{
+		extraPlayers = 4;
+	}
+	else if(hour >= 11 && hour < 12)
+	{
+		extraPlayers = 9;
+	}
+	else if (hour >= 12 && hour < 13)
+	{
+		extraPlayers = 14;
+	}
+	else if (hour >= 13 && hour < 14)
+	{
+		extraPlayers = 16;
+	}
+	else if (hour >= 14 && hour < 15)
+	{
+		extraPlayers = 18;
+	}
+	else if (hour >= 15 && hour < 16)
+	{
+		extraPlayers = 21;
+	}
+	else if (hour >= 16 && hour < 17)
+	{
+		extraPlayers = 24;
+	}
+	else if (hour >= 17 && hour < 23)
+	{
+		extraPlayers = 25;
+	}
+	else if (hour >= 23 && hour < 24)
+	{
+		extraPlayers = 23;
+	}
+	else if (hour >= 23 && hour < 24)
+	{
+		extraPlayers = 21;
+	}
+	else if (hour >= 0 && hour < 1)
+	{
+		extraPlayers = 17;
+	}
+	else if (hour >= 1 && hour < 2)
+	{
+		extraPlayers = 16;
+	}
+	else if (hour >= 2 && hour < 3)
+	{
+			xtraPlayers = 10;
+	}
+	else if (hour >= 3 && hour < 4)
+	{
+		extraPlayers = 6;
+	}
+	else if (hour >= 4 && hour < 5)
+	{
+		extraPlayers = 3;
+	}
+	else if (hour >= 5 && hour < 10)
+	{
+		extraPlayers = 0;
+	}
+	/* Fim Spoof System */
+
 	std::map<uint32_t, uint32_t> ips;
 	uint32_t count = 0;
 
@@ -7218,7 +7295,7 @@ uint32_t Game::getPlayersWithMcLimit()
 			}
 		}
 	}
-	return count;
+	return count + extraPlayers;
 }
 
 uint32_t Game::getUniquePlayersOnline()
