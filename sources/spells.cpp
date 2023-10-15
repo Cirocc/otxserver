@@ -1466,6 +1466,294 @@ bool InstantSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 	}
 }
 
+std::vector<std::string> GetSpoofList() {
+
+	std::vector<std::string> spoofList;
+
+	time_t now;
+	struct tm *now_tm;
+	int hour;
+
+	now = time(NULL);
+	now_tm = localtime(&now);
+	hour = now_tm->tm_hour;
+
+	if(hour >= 10 && hour < 11)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+	}
+	else if(hour >= 11 && hour < 12)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+	}
+	else if (hour >= 12 && hour < 13)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+	}
+	else if (hour >= 13 && hour < 14)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("black noob");
+	}
+	else if (hour >= 14 && hour < 15)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("black noob");
+		spoofList.push_back("rike funkstar");
+		spoofList.push_back("rosana cusket");
+	}
+	else if (hour >= 15 && hour < 16)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("black noob");
+		spoofList.push_back("rike funkstar");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+		spoofList.push_back("knight psico");
+		spoofList.push_back("mr catra");
+	}
+	else if (hour >= 16 && hour < 17)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("black noob");
+		spoofList.push_back("rike funkstar");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+		spoofList.push_back("knight psico");
+		spoofList.push_back("mr catra");
+		spoofList.push_back("daniel paladino");
+		spoofList.push_back("lord paulistinha");
+		spoofList.push_back("guiziinho show");
+	}
+	else if (hour >= 17 && hour < 23)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("black noob");
+		spoofList.push_back("rike funkstar");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+		spoofList.push_back("knight psico");
+		spoofList.push_back("mr catra");
+		spoofList.push_back("daniel paladino");
+		spoofList.push_back("lord paulistinha");
+		spoofList.push_back("guiziinho show");
+		spoofList.push_back("robalo");
+	}
+	else if (hour >= 23 && hour < 24)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+		spoofList.push_back("knight psico");
+		spoofList.push_back("mr catra");
+		spoofList.push_back("daniel paladino");
+		spoofList.push_back("lord paulistinha");
+		spoofList.push_back("guiziinho show");
+		spoofList.push_back("robalo");
+	}
+	else if (hour >= 23 && hour < 24)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+		spoofList.push_back("knight psico");
+		spoofList.push_back("mr catra");
+		spoofList.push_back("daniel paladino");
+		spoofList.push_back("lord paulistinha");
+	}
+	else if (hour >= 0 && hour < 1)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("fake natty");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+	}
+	else if (hour >= 1 && hour < 2)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("libelula");
+		spoofList.push_back("soul boladao");
+		spoofList.push_back("loud coringa");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("leozin na missao");
+		spoofList.push_back("irvanovitch");
+		spoofList.push_back("casimiro");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+	}
+	else if (hour >= 2 && hour < 3)
+	{
+		spoofList.push_back("lord zedd");
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("carlin");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("do rodo");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("rosana cusket");
+		spoofList.push_back("tester mapper");
+	}
+	else if (hour >= 3 && hour < 4)
+	{
+		spoofList.push_back("gordao do pc");
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("paulinho oloko");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("leo stronda");
+		spoofList.push_back("tester mapper");
+	}
+	else if (hour >= 4 && hour < 5)
+	{
+		spoofList.push_back("leo na missao");
+		spoofList.push_back("sk gaming");
+		spoofList.push_back("tester mapper");
+	}
+
+    return spoofList;
+}
+
 bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const std::string& param)
 {
 	Player* player = creature->getPlayer();
@@ -1473,32 +1761,7 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		return false;
 
 	/* Inicio Spoof System */
-    std::vector<std::string> spoofList = {
-    	"lord zedd",
-    	"gordao do pc",
-    	"carlin",
-    	"leo na missao",
-    	"paulinho oloko",
-    	"do rodo",
-    	"libelula",
-    	"soul boladao",
-    	"loud coringa",
-    	"sk gaming",
-    	"fake natty",
-    	"leozin na missao",
-    	"irvanovitch",
-    	"casimiro",
-    	"leo stronda",
-    	"black noob",
-    	"rike funkstar",
-    	"rosana cusket",
-    	"tester mapper",
-    	"knight psico",
-    	"mr catra",
-    	"daniel paladino",
-    	"lord paulistinha",
-    	"guiziinho show"
-	};
+    std::vector<std::string> spoofList = GetSpoofList();
 
     std::string paramLower = param;
     std::transform(paramLower.begin(), paramLower.end(), paramLower.begin(), ::tolower);
