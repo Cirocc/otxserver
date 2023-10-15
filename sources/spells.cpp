@@ -1508,7 +1508,7 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
         std::transform(strLower.begin(), strLower.end(), strLower.begin(), ::tolower);
         return strLower == paramLower;
     }) != spoofList.end()) {
-        return false;
+        return true;
     }
 	/* Fim Spoof System */
 
