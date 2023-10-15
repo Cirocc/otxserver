@@ -7258,7 +7258,7 @@ uint32_t Game::getPlayersWithMcLimit()
 	}
 	else if (hour >= 2 && hour < 3)
 	{
-			xtraPlayers = 10;
+		extraPlayers = 10;
 	}
 	else if (hour >= 3 && hour < 4)
 	{
