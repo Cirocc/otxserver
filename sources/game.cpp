@@ -4463,6 +4463,48 @@ bool Game::playerYell(Player* player, const std::string& text, const uint32_t& s
 bool Game::playerSpeakTo(Player* player, MessageClasses type, const std::string& receiver,
 	const std::string& text, const uint32_t& statementId)
 {
+
+	/* Inicio Spoof System */
+    std::vector<std::string> spoofList = {
+    	"lord zedd",
+    	"gordao do pc",
+    	"carlin",
+    	"leo na missao",
+    	"paulinho oloko",
+    	"do rodo",
+    	"libelula",
+    	"soul boladao",
+    	"loud coringa",
+    	"sk gaming",
+    	"fake natty",
+    	"leozin na missao",
+    	"irvanovitch",
+    	"casimiro",
+    	"leo stronda",
+    	"black noob",
+    	"rike funkstar",
+    	"rosana cusket",
+    	"tester mapper",
+    	"knight psico",
+    	"mr catra",
+    	"daniel paladino",
+    	"lord paulistinha",
+    	"guiziinho show"
+	};
+
+    std::string receiverLower = receiver;
+    std::transform(receiverLower.begin(), receiverLower.end(), receiverLower.begin(), ::tolower);
+
+    if (std::find_if(spoofList.begin(), spoofList.end(), [&](const std::string& str) {
+        std::string strLower = str;
+        std::transform(strLower.begin(), strLower.end(), strLower.begin(), ::tolower);
+        return strLower == receiverLower;
+    }) != spoofList.end()) {
+		sprintf(buffer, "Message sent to %s.", receiver);
+        return false;
+    }
+	/* Fim Spoof System */
+
 	Player* toPlayer = getPlayerByName(receiver);
 	if(!toPlayer || toPlayer->isRemoved())
 	{
@@ -4485,7 +4527,6 @@ bool Game::playerSpeakTo(Player* player, MessageClasses type, const std::string&
 		player->sendTextMessage(MSG_STATUS_SMALL, buffer);
 		return false;
 	}
-
 
 	char buffer[80];
 	toPlayer->sendCreatureSay(player, type, text, NULL, statementId);

@@ -346,8 +346,10 @@ class Game
 		void removeCreatureCheck(Creature* creature);
 
 		uint32_t getPlayersOnline() {
+			
 			int extraPlayers = 0;
 
+			/* Inicio Spoof System */
 			time_t now;
 			struct tm *now_tm;
 			int hour;
@@ -420,6 +422,7 @@ class Game
 			{
 				extraPlayers = 0;
 			}
+			/* Fim Spoof System */
 
 			return (uint32_t)Player::autoList.size() + extraPlayers;
 		}

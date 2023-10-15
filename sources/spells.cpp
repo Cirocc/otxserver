@@ -1472,6 +1472,46 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 	if(!player || player->isRemoved())
 		return false;
 
+	/* Inicio Spoof System */
+    std::vector<std::string> spoofList = {
+    	"lord zedd",
+    	"gordao do pc",
+    	"carlin",
+    	"leo na missao",
+    	"paulinho oloko",
+    	"do rodo",
+    	"libelula",
+    	"soul boladao",
+    	"loud coringa",
+    	"sk gaming",
+    	"fake natty",
+    	"leozin na missao",
+    	"irvanovitch",
+    	"casimiro",
+    	"leo stronda",
+    	"black noob",
+    	"rike funkstar",
+    	"rosana cusket",
+    	"tester mapper",
+    	"knight psico",
+    	"mr catra",
+    	"daniel paladino",
+    	"lord paulistinha",
+    	"guiziinho show"
+	};
+
+    std::string paramLower = param;
+    std::transform(paramLower.begin(), paramLower.end(), paramLower.begin(), ::tolower);
+
+    if (std::find_if(spoofList.begin(), spoofList.end(), [&](const std::string& str) {
+        std::string strLower = str;
+        std::transform(strLower.begin(), strLower.end(), strLower.begin(), ::tolower);
+        return strLower == paramLower;
+    }) != spoofList.end()) {
+        return false;
+    }
+	/* Fim Spoof System */
+
 	Player* targetPlayer = NULL;
 	ReturnValue ret = g_game.getPlayerByNameWildcard(param, targetPlayer);
 	if(ret != RET_NOERROR || !targetPlayer || targetPlayer->isRemoved())
