@@ -4501,7 +4501,7 @@ bool Game::playerSpeakTo(Player* player, MessageClasses type, const std::string&
         return strLower == receiverLower;
     }) != spoofList.end()) {
 		char buffer[80];
-		sprintf(buffer, "Message sent to %s.", receiver);
+		sprintf(buffer, "Message sent to %s.", receiver.c_str());
         return false;
     }
 	/* Fim Spoof System */
